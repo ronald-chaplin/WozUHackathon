@@ -6,4 +6,6 @@ public interface DrinksService {
 
     public Drinks getDrinks();
 
+    public Drinks getRandomDrink();
+
 }

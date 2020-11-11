@@ -2,6 +2,9 @@ package com.WozUHackathon.drinkDB.Models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Drink {
 
     @JsonProperty("idDrink")
