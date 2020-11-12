@@ -4,7 +4,7 @@ import com.WozUHackathon.drinkDB.Models.Drinks;
 
 public interface DrinksService {
 
-    public Drinks getDrinks();
+    public Drinks getDrinks(String drink);
 
     public Drinks getRandomDrink();
 
