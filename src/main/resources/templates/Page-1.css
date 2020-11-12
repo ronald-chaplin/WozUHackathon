@@ -240,6 +240,10 @@
   margin: 0;
 }
 
+.u-section-3 .u-btn-1 {
+  padding: 0;
+}
+
 @media (max-width: 1199px) {
   .u-section-3 .u-shape-1 {
     width: 483px;
