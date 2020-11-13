@@ -24,7 +24,7 @@ public class DrinksController {
     @GetMapping("/drinkoftheday")
     public String getDrinkOftheDay(Model model){
         model.addAttribute("drinks", drinksServiceImpl.getRandomDrink());
-        return "/drinkoftheday";
+        return "drinkoftheday";
     }
 
     @GetMapping("/random")
