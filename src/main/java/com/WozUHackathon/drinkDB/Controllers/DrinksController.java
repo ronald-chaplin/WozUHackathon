@@ -38,7 +38,7 @@ public class DrinksController {
         return "random";
     }
 
-    @RequestMapping("/searchbyname")
+    @GetMapping("/searchbyname")
     public String drinkByName(@RequestParam(value = "search", required = false) String search, Model model){
         Drinks drinks = drinksServiceImpl.getDrinksByName(search);
         model.addAttribute("drinks", drinks);
