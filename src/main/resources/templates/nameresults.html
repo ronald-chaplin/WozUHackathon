@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+</head>
+<body>
+<div align="center">
+    <h1>Search Results</h1>
+    <table>
+        <thead>
+
+        </thead>
+        <tbody>
+
+        <tr th:each="drink : ${drinks}">
+            <td><span th:text="${drink}"> Drink </span></td>
+
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+</body>
+</html>

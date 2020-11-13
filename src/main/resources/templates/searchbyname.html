@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Search by Name</title>
+</head>
+<body>
+<div align="center">
+    <h1>Search by name</h1>
+    <form th:action="@{/nameresults}">
+    <input type="text" th:search="${search}" />
+    <input type="submit"/>
+    </form>
+
+
+</div>
+</body>
+</html>

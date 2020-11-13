@@ -1,15 +1,22 @@
 package com.WozUHackathon.drinkDB.Models;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 @Entity
 @Table(name="Drinks")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Drink {
+
+
 
     @Id
     @Column(name = "drink_id")
@@ -113,6 +120,8 @@ public class Drink {
     @JsonProperty("dateModified")
     private String dateModified;
 
+    //private List<String> attributes = new ArrayList<>();
+
     public Drink(){}
 
     public String getIdDrink() {
@@ -137,6 +146,14 @@ public class Drink {
 
     public void setStrDrinkAlternate(String strDrinkAlternate) {
         this.strDrinkAlternate = strDrinkAlternate;
+    }
+
+    public String getStrCategory() {
+        return strCategory;
+    }
+
+    public void setStrCategory(String strCategory) {
+        this.strCategory = strCategory;
     }
 
     public String getStrAlcoholic() {
@@ -419,4 +436,21 @@ public class Drink {
         this.dateModified = dateModified;
     }
 
+    @Override
+    public String toString() {
+        List<String>attributes = new ArrayList<>();
+        Collections.addAll(attributes, strDrink, strDrinkAlternate,strCategory, strAlcoholic, strGlass, strInstructions,
+                strDrinkThumb, strIngredient1, strIngredient2, strIngredient3, strIngredient4, strIngredient5,
+                strIngredient6, strIngredient7, strIngredient8, strIngredient9, strIngredient10, strIngredient11,
+                strIngredient12, strIngredient13, strIngredient14, strIngredient15, strMeasure1, strMeasure2,
+                strMeasure3, strMeasure4, strMeasure5, strMeasure6, strMeasure7, strMeasure8, strMeasure9,
+                strMeasure10, strMeasure11, strMeasure12, strMeasure13, strMeasure14, strMeasure15);
+        List<String>temp = new ArrayList<>();
+        for(String string : attributes){
+            if(string != null){
+                temp.add(string+"\n"); //not sure why but this removes the instructions even though they are not null
+            }
+        }
+        return temp.toString();
+    }
 }

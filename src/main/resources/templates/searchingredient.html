@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Ingredient</title>
+</head>
+<body>
+<div align="center">
+    <h1>Search by Ingredient</h1>
+    <form th:action="@{/ingredientresult}">
+        <input type="text" th:ingredient="${search}" />
+        <input type="submit"/>
+    </form>
+
+</body>
+</html>

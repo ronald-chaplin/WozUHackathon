@@ -1,6 +1,9 @@
 package com.WozUHackathon.drinkDB.Services;
 
+
+import com.WozUHackathon.drinkDB.Models.Drink;
 import com.WozUHackathon.drinkDB.Models.Drinks;
+import com.WozUHackathon.drinkDB.Models.Ingredients;
 import com.WozUHackathon.drinkDB.Repositories.DrinksRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,11 +15,14 @@ public class DrinksServiceImpl implements DrinksService{
     @Autowired
     DrinksRepo drinksRepo;
 
+//    @Autowired
+//    IngredientRepo ingredientsRepo;
+
     @Override
-    public Drinks getDrinks(String drink) {
+    public Drinks getDrinksByName(String name) {
         RestTemplate restTemplate = new RestTemplate();
         return restTemplate.getForObject(
-                "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita", Drinks.class);
+                "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="+name, Drinks.class);
     }
 
     @Override
@@ -24,5 +30,20 @@ public class DrinksServiceImpl implements DrinksService{
         RestTemplate restTemplate = new RestTemplate();
         return restTemplate.getForObject(
                 "https://www.thecocktaildb.com/api/json/v1/1/random.php", Drinks.class);
+    }
+
+    @Override
+    public Ingredients getIngredient(String name){
+        RestTemplate restTemplate = new RestTemplate();
+        return restTemplate.getForObject(
+                "https://www.thecocktaildb.com/api/json/v1/1/search.php?i="+name, Ingredients.class);
+    }
+
+    @Override
+    public void saveDrinks(Drinks drinks){
+        for(int i = 0; i < drinks.size(); i++)
+        {
+            drinksRepo.save(drinks.get(i));
+        }
     }
 }

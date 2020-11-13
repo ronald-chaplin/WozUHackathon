@@ -1,11 +1,16 @@
 package com.WozUHackathon.drinkDB.Services;
 
 import com.WozUHackathon.drinkDB.Models.Drinks;
+import com.WozUHackathon.drinkDB.Models.Ingredients;
 
 public interface DrinksService {
 
-    public Drinks getDrinks(String drink);
+    Drinks getDrinksByName(String name);
 
-    public Drinks getRandomDrink();
+    Drinks getRandomDrink();
+
+    Ingredients getIngredient(String ingredient);
+
+    void saveDrinks(Drinks drink);
 
 }

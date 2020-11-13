@@ -17,4 +17,16 @@ public class Drinks {
 
     public Drinks(){};
 
+    @Override
+    public String toString() {
+        return "{" + drinks +'}';
+    }
+
+    public int size(){
+        return drinks.size();
+    }
+
+    public Drink get(int i){
+        return drinks.get(i);
+    }
 }
