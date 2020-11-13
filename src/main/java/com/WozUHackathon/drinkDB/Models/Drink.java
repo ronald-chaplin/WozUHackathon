@@ -20,25 +20,9 @@ public class Drink {
     private String strDrink;
     @JsonProperty("strDrinkAlternate")
     private String strDrinkAlternate;
-    @JsonProperty("strDrinkES")
-    private String strDrinkES;
-    @JsonProperty("strDrinkDe")
-    private String strDrinkDE;
-    @JsonProperty("strDrinkFR")
-    private String strDrinkFR;
-    @JsonProperty("strDrinkZH-HANS")
-    private String strDrinkZHHANS;
-    @JsonProperty("strDrinkZH-HANT")
-    private String strDrinkZHHANT;
-    @JsonProperty("strTags")
-    private String strTags;
-    @JsonProperty("strVideo")
-    private String strVideo;
     @Column(name="category",nullable = true)
     @JsonProperty("strCategory")
     private String strCategory;
-    @JsonProperty("strIBA")
-    private String strIBA;
     @Column(name="alcoholic",nullable = true)
     @JsonProperty("strAlcoholic")
     private String strAlcoholic;
@@ -47,62 +31,52 @@ public class Drink {
     private String strGlass;
     @JsonProperty("StrInstructions")
     private String strInstructions;
-    @JsonProperty("strInstructionsES")
-    private String strInstructionsES;
-    @JsonProperty("strInstructionsDe")
-    private String strInstructionsDE;
-    @JsonProperty("strInstructionsFR")
-    private String strInstructionsFR;
-    @JsonProperty("strInstructionsZH-HANS")
-    private String strInstructionsZHHANS;
-    @JsonProperty("strInstructionsZH-HANT")
-    private String strInstructionsZHHANT;
     @Column(name="drink_thumb",nullable = true)
     @JsonProperty("strDrinkThumb")
     private String strDrinkThumb;
-    @Column(name="ingredient_1",nullable = true)
+    @Column(name="ingredient_a",nullable = true)
     @JsonProperty("strIngredient1")
     private String strIngredient1;
-    @Column(name="ingredient_2",nullable = true)
+    @Column(name="ingredient_b",nullable = true)
     @JsonProperty("strIngredient2")
     private String strIngredient2;
-    @Column(name="ingredient_3",nullable = true)
+    @Column(name="ingredient_c",nullable = true)
     @JsonProperty("strIngredient3")
     private String strIngredient3;
-    @Column(name="ingredient_4",nullable = true)
+    @Column(name="ingredient_d",nullable = true)
     @JsonProperty("strIngredient4")
     private String strIngredient4;
-    @Column(name="ingredient_5",nullable = true)
+    @Column(name="ingredient_e",nullable = true)
     @JsonProperty("strIngredient5")
     private String strIngredient5;
-    @Column(name="ingredient_6",nullable = true)
+    @Column(name="ingredient_f",nullable = true)
     @JsonProperty("strIngredient6")
     private String strIngredient6;
-    @Column(name="ingredient_7",nullable = true)
+    @Column(name="ingredient_g",nullable = true)
     @JsonProperty("strIngredient7")
     private String strIngredient7;
-    @Column(name="ingredient_8",nullable = true)
+    @Column(name="ingredient_h",nullable = true)
     @JsonProperty("strIngredient8")
     private String strIngredient8;
-    @Column(name="ingredient_9",nullable = true)
+    @Column(name="ingredient_i",nullable = true)
     @JsonProperty("strIngredient9")
     private String strIngredient9;
-    @Column(name="ingredient_10",nullable = true)
+    @Column(name="ingredient_j",nullable = true)
     @JsonProperty("strIngredient10")
     private String strIngredient10;
-    @Column(name="ingredient_11",nullable = true)
+    @Column(name="ingredient_k",nullable = true)
     @JsonProperty("strIngredient11")
     private String strIngredient11;
-    @Column(name="ingredient_12",nullable = true)
+    @Column(name="ingredient_l",nullable = true)
     @JsonProperty("strIngredient12")
     private String strIngredient12;
-    @Column(name="ingredient_13",nullable = true)
+    @Column(name="ingredient_m",nullable = true)
     @JsonProperty("strIngredient13")
     private String strIngredient13;
-    @Column(name="ingredient_14",nullable = true)
+    @Column(name="ingredient_n",nullable = true)
     @JsonProperty("strIngredient14")
     private String strIngredient14;
-    @Column(name="ingredient_15",nullable = true)
+    @Column(name="ingredient_o",nullable = true)
     @JsonProperty("strIngredient15")
     private String strIngredient15;
     @JsonProperty("strMeasure1")
@@ -135,7 +109,6 @@ public class Drink {
     private String strMeasure14;
     @JsonProperty("strMeasure15")
     private String strMeasure15;
-    private String strCreativeCommonsConfirmed;
     @Column(name="date_modified")
     @JsonProperty("dateModified")
     private String dateModified;
@@ -166,78 +139,6 @@ public class Drink {
         this.strDrinkAlternate = strDrinkAlternate;
     }
 
-    public String getStrDrinkES() {
-        return strDrinkES;
-    }
-
-    public void setStrDrinkES(String strDrinkES) {
-        this.strDrinkES = strDrinkES;
-    }
-
-    public String getStrDrinkDE() {
-        return strDrinkDE;
-    }
-
-    public void setStrDrinkDE(String strDrinkDE) {
-        this.strDrinkDE = strDrinkDE;
-    }
-
-    public String getStrDrinkFR() {
-        return strDrinkFR;
-    }
-
-    public void setStrDrinkFR(String strDrinkFR) {
-        this.strDrinkFR = strDrinkFR;
-    }
-
-    public String getStrDrinkZHHANS() {
-        return strDrinkZHHANS;
-    }
-
-    public void setStrDrinkZHHANS(String strDrinkZHHANS) {
-        this.strDrinkZHHANS = strDrinkZHHANS;
-    }
-
-    public String getStrDrinkZHHANT() {
-        return strDrinkZHHANT;
-    }
-
-    public void setStrDrinkZHHANT(String strDrinkZHHANT) {
-        this.strDrinkZHHANT = strDrinkZHHANT;
-    }
-
-    public String getStrTags() {
-        return strTags;
-    }
-
-    public void setStrTags(String strTags) {
-        this.strTags = strTags;
-    }
-
-    public String getStrVideo() {
-        return strVideo;
-    }
-
-    public void setStrVideo(String strVideo) {
-        this.strVideo = strVideo;
-    }
-
-    public String getStrCategory() {
-        return strCategory;
-    }
-
-    public void setStrCategory(String strCategory) {
-        this.strCategory = strCategory;
-    }
-
-    public String getStrIBA() {
-        return strIBA;
-    }
-
-    public void setStrIBA(String strIBA) {
-        this.strIBA = strIBA;
-    }
-
     public String getStrAlcoholic() {
         return strAlcoholic;
     }
@@ -260,46 +161,6 @@ public class Drink {
 
     public void setStrInstructions(String strInstructions) {
         this.strInstructions = strInstructions;
-    }
-
-    public String getStrInstructionsES() {
-        return strInstructionsES;
-    }
-
-    public void setStrInstructionsES(String strInstructionsES) {
-        this.strInstructionsES = strInstructionsES;
-    }
-
-    public String getStrInstructionsDE() {
-        return strInstructionsDE;
-    }
-
-    public void setStrInstructionsDE(String strInstructionsDE) {
-        this.strInstructionsDE = strInstructionsDE;
-    }
-
-    public String getStrInstructionsFR() {
-        return strInstructionsFR;
-    }
-
-    public void setStrInstructionsFR(String strInstructionsFR) {
-        this.strInstructionsFR = strInstructionsFR;
-    }
-
-    public String getStrInstructionsZHHANS() {
-        return strInstructionsZHHANS;
-    }
-
-    public void setStrInstructionsZHHANS(String strInstructionsZHHANS) {
-        this.strInstructionsZHHANS = strInstructionsZHHANS;
-    }
-
-    public String getStrInstructionsZHHANT() {
-        return strInstructionsZHHANT;
-    }
-
-    public void setStrInstructionsZHHANT(String strInstructionsZHHANT) {
-        this.strInstructionsZHHANT = strInstructionsZHHANT;
     }
 
     public String getStrDrinkThumb() {
@@ -548,14 +409,6 @@ public class Drink {
 
     public void setStrMeasure15(String strMeasure15) {
         this.strMeasure15 = strMeasure15;
-    }
-
-    public String getStrCreativeCommonsConfirmed() {
-        return strCreativeCommonsConfirmed;
-    }
-
-    public void setStrCreativeCommonsConfirmed(String strCreativeCommonsConfirmed) {
-        this.strCreativeCommonsConfirmed = strCreativeCommonsConfirmed;
     }
 
     public String getDateModified() {
