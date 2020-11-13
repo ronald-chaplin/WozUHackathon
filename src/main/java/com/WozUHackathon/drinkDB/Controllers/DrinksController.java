@@ -21,10 +21,11 @@ public class DrinksController {
         return "index.html";
     }
 
-//    @GetMapping("/DrinkoftheDay.html")
-//    public Drinks getDrinkOftheDay(){
-//        return drinksServiceImpl.getRandomDrink();
-//    }
+    @GetMapping("/drinkoftheday")
+    public String getDrinkOftheDay(Model model){
+        model.addAttribute("drinks", drinksServiceImpl.getRandomDrink());
+        return "/drinkoftheday";
+    }
 
     @GetMapping("/random")
     public String randomDrink(Model model){
