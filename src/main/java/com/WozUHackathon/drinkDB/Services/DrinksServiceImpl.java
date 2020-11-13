@@ -1,11 +1,16 @@
 package com.WozUHackathon.drinkDB.Services;
 
 import com.WozUHackathon.drinkDB.Models.Drinks;
+import com.WozUHackathon.drinkDB.Repositories.DrinksRepo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 @Service
 public class DrinksServiceImpl implements DrinksService{
+
+    @Autowired
+    DrinksRepo drinksRepo;
 
     @Override
     public Drinks getDrinks(String drink) {

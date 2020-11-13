@@ -2,13 +2,20 @@ package com.WozUHackathon.drinkDB.Models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="Drinks")
 public class Drink {
 
+    @Id
+    @Column(name = "drink_id")
     @JsonProperty("idDrink")
     private String idDrink;
+    @Column(name = "drink")
     @JsonProperty("strDrink")
     private String strDrink;
     @JsonProperty("strDrinkAlternate")
@@ -27,12 +34,15 @@ public class Drink {
     private String strTags;
     @JsonProperty("strVideo")
     private String strVideo;
+    @Column(name="category",nullable = true)
     @JsonProperty("strCategory")
     private String strCategory;
     @JsonProperty("strIBA")
     private String strIBA;
+    @Column(name="alcoholic",nullable = true)
     @JsonProperty("strAlcoholic")
     private String strAlcoholic;
+    @Column(name="glass",nullable = true)
     @JsonProperty("strGlass")
     private String strGlass;
     @JsonProperty("StrInstructions")
@@ -47,36 +57,52 @@ public class Drink {
     private String strInstructionsZHHANS;
     @JsonProperty("strInstructionsZH-HANT")
     private String strInstructionsZHHANT;
+    @Column(name="drink_thumb",nullable = true)
     @JsonProperty("strDrinkThumb")
     private String strDrinkThumb;
+    @Column(name="ingredient_1",nullable = true)
     @JsonProperty("strIngredient1")
     private String strIngredient1;
+    @Column(name="ingredient_2",nullable = true)
     @JsonProperty("strIngredient2")
     private String strIngredient2;
+    @Column(name="ingredient_3",nullable = true)
     @JsonProperty("strIngredient3")
     private String strIngredient3;
+    @Column(name="ingredient_4",nullable = true)
     @JsonProperty("strIngredient4")
     private String strIngredient4;
+    @Column(name="ingredient_5",nullable = true)
     @JsonProperty("strIngredient5")
     private String strIngredient5;
+    @Column(name="ingredient_6",nullable = true)
     @JsonProperty("strIngredient6")
     private String strIngredient6;
+    @Column(name="ingredient_7",nullable = true)
     @JsonProperty("strIngredient7")
     private String strIngredient7;
+    @Column(name="ingredient_8",nullable = true)
     @JsonProperty("strIngredient8")
     private String strIngredient8;
+    @Column(name="ingredient_9",nullable = true)
     @JsonProperty("strIngredient9")
     private String strIngredient9;
+    @Column(name="ingredient_10",nullable = true)
     @JsonProperty("strIngredient10")
     private String strIngredient10;
+    @Column(name="ingredient_11",nullable = true)
     @JsonProperty("strIngredient11")
     private String strIngredient11;
+    @Column(name="ingredient_12",nullable = true)
     @JsonProperty("strIngredient12")
     private String strIngredient12;
+    @Column(name="ingredient_13",nullable = true)
     @JsonProperty("strIngredient13")
     private String strIngredient13;
+    @Column(name="ingredient_14",nullable = true)
     @JsonProperty("strIngredient14")
     private String strIngredient14;
+    @Column(name="ingredient_15",nullable = true)
     @JsonProperty("strIngredient15")
     private String strIngredient15;
     @JsonProperty("strMeasure1")
@@ -109,8 +135,8 @@ public class Drink {
     private String strMeasure14;
     @JsonProperty("strMeasure15")
     private String strMeasure15;
-    @JsonProperty("strCreativeCommonsConfirmed")
     private String strCreativeCommonsConfirmed;
+    @Column(name="date_modified")
     @JsonProperty("dateModified")
     private String dateModified;
 
